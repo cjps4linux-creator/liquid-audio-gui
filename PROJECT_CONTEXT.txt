@@ -1,0 +1,1 @@
+LM Studio + LFM2.5-Audio-1.5B-GGUF voice GUI project: local wrapper around LM Studio's local OpenAI-compatible HTTP API at http://127.0.0.1:1234 for realtime/bidirectional audio chat. Model confirmed loaded in screenshot: LFM2.5 Audio 1.5B. `/v1/models` works. Remaining work: confirm LM Studio supported audio streaming/transcription endpoints and complete GUI wiring.
