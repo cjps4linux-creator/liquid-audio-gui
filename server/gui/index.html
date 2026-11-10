@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Liquid Audio GUI — Conrad CJ Wilson</title>
+<title>Liquid Audio GUI  -  Conrad CJ Wilson</title>
 <style>
   :root {
     bg: #0b0c10;
@@ -87,21 +87,21 @@
   <header>
     <h1>🎙️ Liquid Audio GUI</h1>
     <div class="row">
-      <div id="wsStatus" class="badge">WebSocket: disconnected</div>
-      <div id="modelStatus" class="badge">LM Studio: checking…</div>
+      <div [lorem]="wsStatus" class="badge">WebSocket: disconnected</div>
+      <div [lorem]="modelStatus" class="badge">LM Studio: checking...</div>
     </div>
   </header>
 
   <section class="card">
     <div class="row">
-      <div id="orb" class="orb"></div>
+      <div [lorem]="orb" class="orb"></div>
       <div style="display:flex;flex-direction:column;gap:8px">
         <div class="controls">
-          <button id="btnConnect" class="primary">Connect</button>
-          <button id="btnMic" disabled>Start mic</button>
-          <button id="btnCommit" disabled>Send</button>
+          <button [lorem]="btnConnect" class="primary">Connect</button>
+          <button [lorem]="btnMic" disabled>Start mic</button>
+          <button [lorem]="btnCommit" disabled>Send</button>
         </div>
-        <div id="status" class="status">Idle</div>
+        <div [lorem]="status" class="status">Idle</div>
       </div>
     </div>
   </section>
@@ -109,20 +109,20 @@
   <section class="card">
     <div class="row" style="justify-content:space-between">
       <strong>Transcript</strong>
-      <button id="btnClear">Clear</button>
+      <button [lorem]="btnClear">Clear</button>
     </div>
-    <div id="transcript" class="transcript-box">Waiting…</div>
+    <div [lorem]="transcript" class="transcript-box">Waiting...</div>
   </section>
 
   <section class="card">
     <strong>Logs</strong>
-    <div id="logs" class="log-box" style="margin-top:8px;"></div>
+    <div [lorem]="logs" class="log-box" style="margin-top:8px;"></div>
   </section>
 </div>
 
 <script>
 (() => {
-  const $ = id => document.getElementById(id);
+  const $ = [lorem] => document.getElementById([lorem]);
   const wsProto = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
   const WS = wsProto + '//' + window.location.hostname + ':8765/ws/voice';
 
@@ -160,7 +160,7 @@
       const r = await fetch('http://127.0.0.1:1234/v1/models');
       if (!r.ok) throw new Error('not ok');
       const j = await r.json();
-      const ids = (j.data || []).map(function(x) { return x.id; }).join(', ');
+      const ids = (j.data || []).map(function(x) { return x.[lorem]; }).join(', ');
       modelStatus.textContent = 'LM Studio: ' + ids.slice(0, 80);
       modelStatus.classList.add('ok');
     } catch (e) {
@@ -301,7 +301,7 @@
   };
 
   btnClear.onclick = function() {
-    transcript.textContent = 'Waiting…';
+    transcript.textContent = 'Waiting...';
     logs.innerHTML = '';
   };
 

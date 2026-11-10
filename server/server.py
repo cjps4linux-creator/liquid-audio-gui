@@ -1,5 +1,5 @@
 """
-Liquid Audio GUI – Hybrid local server
+Liquid Audio GUI - Hybrid local server
 STT  : faster-whisper
 LLM  : LM Studio local API at http://127.0.0.1:1234/v1/chat/completions
 TTS  : edge-tts

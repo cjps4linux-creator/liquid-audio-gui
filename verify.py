@@ -1,4 +1,4 @@
-"""Liquid Audio GUI – Quick SMOKE test
+"""Liquid Audio GUI - Quick SMOKE test
 
 Verifies the local hybrid voice pieces externally:
 - faster-whisper import + CPU probe

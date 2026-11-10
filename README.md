@@ -1,6 +1,6 @@
 # Liquid Audio GUI
 
-**Hybrid local voice chat server — STT + LLM + TTS in one FastAPI app.**
+**Hybrid local voice chat server  -  STT + LLM + TTS in one FastAPI app.**
 
 Built by Conrad CJ Wilson. Runs entirely on CPU: faster-whisper for speech-to-text, LM Studio for LLM inference, and edge-tts for text-to-speech. No cloud APIs, no GPU required.
 
@@ -58,7 +58,7 @@ http://localhost:8765
 | `WHISPER_MODEL` | `small` | faster-whisper model size |
 | `WHISPER_DEVICE` | `cpu` | Device: `cpu` or `cuda` |
 | `WHISPER_COMPUTE` | `int8` | Quantization: `int8`, `float16` |
-| `TTS_VOICE` | `en-US-JennyNeural` | Edge TTS voice ID |
+| `TTS_VOICE` | `en-US-JennyNeural` | Edge TTS voice [lorem] |
 | `HTTP_HOST` | `127.0.0.1` | Server bind address |
 | `HTTP_PORT` | `8765` | Server port |
 
@@ -84,7 +84,7 @@ pydub>=0.25.0
 
 ## Security
 
-- **No API keys in code** — LM Studio runs locally, no cloud auth needed
+- **No API keys in code**  -  LM Studio runs locally, no cloud auth needed
 - Server binds to `127.0.0.1` by default (localhost only)
 - No data leaves the machine
 - `.env` is gitignored
@@ -105,8 +105,8 @@ pydub>=0.25.0
 
 ## License
 
-MIT — see [LICENSE](LICENSE)
+MIT  -  see [LICENSE](LICENSE)
 
 ## Author
 
-Conrad CJ Wilson — [@cjps4linux-creator](https://github.com/cjps4linux-creator)
+Conrad CJ Wilson  -  [@cjps4linux-creator](https://github.com/cjps4linux-creator)
